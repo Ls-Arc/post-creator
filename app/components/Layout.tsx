@@ -5,7 +5,7 @@ export type LayoutProps = {
   user: { name: string };
 };
 
-export default function Layout({ children, user }: LayoutProps) {
+export default function Layout({ user }: LayoutProps) {
   return (
     <div className="layout">
       <nav>
@@ -21,7 +21,7 @@ export default function Layout({ children, user }: LayoutProps) {
           <Link to="/login">Iniciar Sesión</Link>
         )}
       </nav>
-      {children}
+      {/* {children} */}
     </div>
   );
 }

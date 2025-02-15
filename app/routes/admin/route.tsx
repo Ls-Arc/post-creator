@@ -30,17 +30,17 @@ export default function AppLayout() {
         <h2>Lista de Posts</h2>
         <ul>
           {posts.map((post) => (
-            <li key={post.id}>
+            <li style={{ color: "black" }} key={post.id}>
               <a href={`/posts/${post.id}`}>{post.title}</a>
             </li>
           ))}
         </ul>
         {user && user.role === "ADMIN" && (
-          <div style={{ marginTop: "2rem" }}>
+          <div style={{ marginTop: "2rem", color: "black" }}>
             <h3>Opciones Admin</h3>
             <ul>
               <li>
-                <a href="/admin/create">Crear Post</a>
+                <a className="text-black" style={{ color: "black" }} href="/admin/create">Crear Post</a>
               </li>
               <li>
                 <a href="/admin/edit">Editar Post</a>
